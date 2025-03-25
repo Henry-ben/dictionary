@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dictionary</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="top-menu">
+            <img src="image/logo.svg" alt="logo">
+            <div class="vertical-line"></div>
+             
+            <select id="fontSelect">
+                <option value="Serif">Serif</option>
+                <option value="Arial">Arial</option>
+                <option value="Times New Roman">Times New Roman</option>
+                <option value="Courier New">Courier New</option>
+                <option value="Georgia">Georgia</option>
+                <option value="Verdana">Verdana</option>
+            </select>
+
+            <label class="toggle-switch">
+                <input type="checkbox" id="themeToggle">
+                <span class="slider">
+                    <span class="icon"><img src="image/icon-moon.svg"></span>
+                </span>
+            </label>
+           
+
+        </div>
+        <div class="search-bar" >
+            <input type="text" id="wordInput" placeholder="search anyword" name="word">
+            <button type="submit" onclick="search()"><img src="image/icon-search.svg"></button>
+        </div>
+        <div id="output"></div>
+        <audio id="audioPlayer" controls hidden></audio>
+
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
