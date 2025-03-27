@@ -354,3 +354,15 @@ input:checked + .adjust::before {
         left: 62%;
     }
 }
+
+@media(2500px <= width <= 4000px){
+
+    .vertical-line{
+        left: 58%;
+    }
+
+    #fontSelect{
+        left: 52%;
+        width: 5%;
+    }
+}
