@@ -1,0 +1,356 @@
+body{
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: white;
+    border:  none;
+    padding: 20px;
+}
+.search-bar{
+    position: relative;
+    background-color: #f4f4f4;
+    color: black;
+    width: 100%;
+    max-width: 700px;
+    display: flex;
+    align-items: center;
+    border-radius: 6px;
+    margin-top: 45px;
+}
+::placeholder{
+    color: #fff;
+}
+.search-bar input{
+    background: transparent;
+    color: black;
+    border: 0;
+    outline: none;
+    flex: 1;
+    padding: 20px 24px;
+    font-size: 20px;  
+}
+.search-bar button{
+    background: transparent;
+    border: 0;
+    border-radius: 50%;
+    cursor: pointer;
+
+}
+.search-bar button img{
+    width: 25px;
+    padding: 2px 5px;
+}
+
+.error {
+    color: red;
+}
+ul {
+    text-align: left;
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+#fontSelect{
+    position: absolute;
+    left: 53%;
+    top: 41px;
+    width: 10%;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: 0;
+    text-align: end;
+}
+
+.vertical-line {
+    position: absolute;
+    left: 63%;
+    top: 33px;
+    width: 2px; 
+    height: 30px;
+    background-color: #666;
+    margin: 0;
+}
+
+.toggle-switch {
+    position: relative;
+    left: 80%;
+    top: -20px;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-switch img{
+    position: absolute;
+    left: 63px;
+    top: 4px;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    inset: 0;
+    background-color: #ccc;
+    border-radius: 30px;
+    transition: background-color 0.4s;
+}
+
+.slider::before {
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.4s;
+}
+
+input:checked + .slider {
+    background-color: rgb(193, 15, 193);
+}
+
+input:checked + .slider::before {
+    transform: translateX(30px);
+}
+
+.dark-mode {
+    background-color: #222;
+    color: white;
+}
+.dark-mode .container {
+    background-color: transparent;
+}
+
+.dark-mode select {
+    background: #333;
+    color: white;
+    border: none;
+}
+
+.dark-mode .adjust{
+    background-color: #333;
+}
+#playButton{
+    position: relative;
+    top: 25px;
+}
+
+#playButton img{
+    width: 50px;
+    height: 35px;
+}
+
+.speed-switch {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 8px;
+    position: relative;
+    left: 32%;
+    top: 80px;
+}
+
+
+#speedLabel{
+    position: relative;
+    left: 110%;
+    top: 20%;
+    font-size: 90%;
+}
+.adjust {
+    background-color: #ccc;
+    border-radius: 15px;
+    width: 50px;
+    height: 25px;
+    position: relative;
+    left: -28px;
+    transition: background 0.3s ease;
+}
+
+.adjust::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: white;
+    border-radius: 50%;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    transition: left 0.3s ease;
+}
+
+input:checked + .adjust {
+    background-color: rgb(193, 15, 193);
+}
+
+input:checked + .adjust::before {
+    left: 25px;
+}
+
+
+.loader {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid rgb(193, 15, 193);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+.audio-container {
+    position: relative;
+    left: 45%;
+    top: 27px;
+    background: url(image/mouth.jpg) no-repeat transparent;
+    background-size: contain;
+    background-position: 2px;
+    background-color: black;
+}
+
+
+#mouthButton {
+    position: relative;
+    top: 43%;
+    left: 70;
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border-radius: 5%;
+    transition: background 0.3s ease;
+}
+
+
+.mouth {
+    position: absolute;
+    padding: 2px 5px 5px 2px;
+    top: 50%;
+    left: 35%;
+    width: 30px;
+    height: 10px;
+    border: 2px solid red;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 12px;
+    display: none;
+}
+
+
+@keyframes talk {
+    0% { transform: scaleY(1.5); }
+    100% { transform: scaleY(0.5); }
+}
+
+#playImage{
+    width: 40px;
+
+}
+
+@media(250px <= width <= 600px){
+    body{
+        justify-content: center;
+        align-items: center;
+    }
+    .container{
+        width: 90%;
+    }
+    .toggle-switch{
+        position: relative;
+        left: 65%;
+    }
+
+    .vertical-line{
+        left: 71%;
+    }
+
+    #fontSelect{
+        left: 58%;
+    }
+
+    .search-bar button img{
+        width: 85%;
+    }
+
+    .search-bar button{
+        margin-left: -10px;
+    }
+
+    .audio-container{
+        height: 50px;
+        left: 0.5%;
+    }
+    #mouthButton{
+        height: 50px;
+        top: -0.5px;
+    }
+
+    .speed-switch{
+        top: 70px;
+        left: -78px;
+    }
+
+    #speedLabel{
+        font-size: 80%;
+        left: -49px;
+        top: 1px;
+    }
+
+    .adjust{
+        height: 20px;
+        width: 40px;
+    }
+
+    input:checked + .adjust::before{
+        left: 18px;
+    }
+}
+
+
+@media(601px <= width <= 768px){
+    .vertical-line{
+        left: 77%;
+    }
+
+    #fontSelect{
+        left: 65%;
+    }
+}
+
+@media(770px <= width <= 1000px){
+    .vertical-line{
+        left: 73%;
+    }
+
+    #fontSelect{
+        left: 62%;
+    }
+}
